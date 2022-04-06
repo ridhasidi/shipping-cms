@@ -1,0 +1,65 @@
+[
+  {
+    "shipmentId": 111,
+    "shipmentDate": "1-Jan",
+    "truckId": "T-111",
+    "truckType": "Semi-Trailer",
+    "productId": "A",
+    "productType": "Tire",
+    "quantity": 180
+  },
+  {
+    "shipmentId": 111,
+    "shipmentDate": "1-Jan",
+    "truckId": "T-111",
+    "truckType": "Semi-Trailer",
+    "productId": "B",
+    "productType": "Battery",
+    "quantity": 120
+  },
+  {
+    "shipmentId": 222,
+    "shipmentDate": "2-Jan",
+    "truckId": "T-222",
+    "truckType": "Van Truck",
+    "productId": "C",
+    "productType": "SparkPlug",
+    "quantity": 10000
+  },
+  {
+    "shipmentId": 333,
+    "shipmentDate": "3-Jan",
+    "truckId": "T-333",
+    "truckType": "Semi-Trailer",
+    "productId": "D",
+    "productType": "Wipers",
+    "quantity": 5000
+  },
+  {
+    "shipmentId": 333,
+    "shipmentDate": "3-Jan",
+    "truckId": "T-333",
+    "truckType": "Semi-Trailer",
+    "productId": "A",
+    "productType": "Tire",
+    "quantity": 200
+  },
+  {
+    "shipmentId": 444,
+    "shipmentDate": "3-Jan",
+    "truckId": "T-222",
+    "truckType": "Van Truck",
+    "productId": "C",
+    "productType": "SparkPlug",
+    "quantity": 25000
+  },
+  {
+    "shipmentId": 555,
+    "shipmentDate": "3-Jan",
+    "truckId": "T-111",
+    "truckType": "Semi-Trailer",
+    "productId": "B",
+    "productType": "Battery",
+    "quantity": 180
+  }
+]
