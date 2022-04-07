@@ -35,6 +35,7 @@ class Controller {
       }
       const payload = {
         id: user.id,
+        name: user.name,
         role: user.role,
       };
       res.status(200).json(payload);
