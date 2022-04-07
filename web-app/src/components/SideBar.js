@@ -18,11 +18,13 @@ export default function Sidebar() {
             <Link className="text-xl mb-2" to="/shipments">
               Shipments
             </Link>
-            <p className="text-xl mb-2">Log out</p>
+            <Link className="text-xl mb-2" to="/login">
+              Log out
+            </Link>
           </div>
         </div>
       ) : (
-        <svg onClick={() => setShowSidebar(!showSidebar)} className="fixed  z-30 flex items-center cursor-pointer left-6 top-6" fill="rgb(3 105 161)" viewBox="0 0 100 80" width="40" height="40">
+        <svg onClick={() => setShowSidebar(!showSidebar)} className="fixed  z-30 flex items-center cursor-pointer left-6 top-6" fill="rgb(3 105 161)" viewBox="0 0 100 80" width="30" height="30">
           <rect width="100" height="10"></rect>
           <rect y="30" width="100" height="10"></rect>
           <rect y="60" width="100" height="10"></rect>
