@@ -1,8 +1,28 @@
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 export default function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(true);
+  const navigate = useNavigate();
+  const logout = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      title: "Log Out",
+      text: "Do you want to logout?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "rgb(225 29 72)",
+      cancelButtonColor: "rgb(14 165 233)",
+      confirmButtonText: "Log Out",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.clear();
+        Swal.fire("See you later!", "You have successfully logged out!", "success");
+        navigate("/login");
+      }
+    });
+  };
   return (
     <>
       {showSidebar ? (
@@ -18,9 +38,9 @@ export default function Sidebar() {
             <Link className="text-xl mb-2" to="/shipments">
               Shipments
             </Link>
-            <Link className="text-xl mb-2" to="/login">
+            <button onClick={logout} className="text-xl mb-2 text-left">
               Log out
-            </Link>
+            </button>
           </div>
         </div>
       ) : (

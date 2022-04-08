@@ -5,7 +5,9 @@ import ErrorPage from "../pages/ErrorPage";
 import LoadingPage from "../pages/LoadingPage";
 export default function ShipsTable() {
   const [search, setSearch] = useState("");
-  const { data, loading, error, refetch } = useQuery(GET_SHIPS);
+  const { data, loading, error, refetch } = useQuery(GET_SHIPS, {
+    variables: { accessToken: localStorage.getItem("access_token") },
+  });
   const changeFilter = (e) => {
     const { value } = e.target;
     setSearch(value);
@@ -19,7 +21,7 @@ export default function ShipsTable() {
     return <LoadingPage />;
   }
   if (error) {
-    return <ErrorPage />;
+    return <ErrorPage error={error.message} />;
   }
   return (
     <div className="grow flex flex-col mt-3 justify-center bg-white px-8 drop-shadow-lg rounded-md">

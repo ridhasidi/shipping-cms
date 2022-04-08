@@ -1,3 +1,4 @@
+const { ApolloError } = require("apollo-server");
 const axios = require("axios");
 const resolvers = {
   Mutation: {
@@ -12,7 +13,7 @@ const resolvers = {
         });
         return data;
       } catch (error) {
-        return error.response.data;
+        return new ApolloError(error?.response.data.message);
       }
     },
     login: async (_, args) => {
@@ -26,7 +27,7 @@ const resolvers = {
         });
         return data;
       } catch (error) {
-        return error.response.data;
+        return new ApolloError(error?.response.data.message);
       }
     },
   },

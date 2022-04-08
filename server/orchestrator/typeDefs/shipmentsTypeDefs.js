@@ -13,7 +13,7 @@ const typeDefs = gql`
   }
 
   extend type Query {
-    getShipments(search: String): [Shipment]
+    getShipments(search: String, access_token: String): [Shipment]
   }
 `;
 

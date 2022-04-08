@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 export const GET_SHIPMENTS = gql`
-  query GetShipments($search: String) {
-    getShipments(search: $search) {
+  query GetShipments($search: String, $accessToken: String) {
+    getShipments(search: $search, access_token: $accessToken) {
       id
       shipmentId
       shipmentDate
