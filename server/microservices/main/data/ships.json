@@ -1,0 +1,32 @@
+[
+  {
+    "ship": "Anna Maersk",
+    "length": 352,
+    "direction": "Outbound",
+    "displacement": 96600
+  },
+  {
+    "ship": "Katrine Maersk",
+    "length": 318,
+    "direction": "Inbound",
+    "displacement": 107200
+  },
+  {
+    "ship": "Maersk Dortmund",
+    "length": 294,
+    "direction": "Inbound",
+    "displacement": 55000
+  },
+  {
+    "ship": "Sally Maersk",
+    "length": 347,
+    "direction": "Outbound",
+    "displacement": 111300
+  },
+  {
+    "ship": "Sofie Maersk",
+    "length": 347,
+    "direction": "Outbound",
+    "displacement": 110200
+  }
+]
