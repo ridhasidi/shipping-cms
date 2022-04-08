@@ -10,9 +10,11 @@ c. Make sure your device is connected to internet
 
 d. Run `npm install` on your terminal to download and install all dependencies
 
-e. Run `npm run migrate` on your terminal to create the database and seed data to the database
+e. Create `.env` file in this directory and type `SECRET_KEY=[Any string as you wish]` in that file. For example: `SECRET_KEY=secret`.
 
-f. Run `npm run dev` or `npm start` on your terminal to run the API, then it will run on your localhost port 4001 (if it's still available)
+f. Run `npm run migrate` on your terminal to create the database and seed data to the database
+
+g. Run `npm run dev` or `npm start` on your terminal to run the API, then it will run on your localhost port 4001 (if it's still available)
 
 # 2. Run the `Orchestrator` API Gateway
 
