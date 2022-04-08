@@ -1,9 +1,10 @@
+const { ApolloError } = require("apollo-server");
 const axios = require("axios");
 const resolvers = {
   Query: {
     getShips: async (_, args) => {
       try {
-        const { search } = args;
+        const { search, access_token } = args;
         let baseUrl = "http://localhost:4001/ships";
         if (search) {
           baseUrl = `${baseUrl}?search=${search}`;
@@ -11,10 +12,13 @@ const resolvers = {
         const { data } = await axios({
           method: "GET",
           url: baseUrl,
+          headers: {
+            access_token,
+          },
         });
         return data;
       } catch (error) {
-        return error.response.data;
+        return new ApolloError(error?.response.data.message);
       }
     },
   },

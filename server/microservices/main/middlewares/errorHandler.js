@@ -14,7 +14,6 @@ function errorHandlers(err, req, res, next) {
     code = 401;
     msg = "Invalid user or password";
   }
-  console.log(err);
   res.status(code).json({ message: msg });
 }
 

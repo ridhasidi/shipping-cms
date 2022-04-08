@@ -10,7 +10,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    getShips(search: String): [Ship]
+    getShips(search: String, access_token: String): [Ship]
   }
 `;
 

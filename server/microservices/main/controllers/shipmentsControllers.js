@@ -8,7 +8,14 @@ class Controller {
       if (search) {
         query = {
           where: {
-            [Op.or]: [{ truckId: search }, { productId: search }],
+            [Op.or]: [
+              {
+                truckId: { [Op.iLike]: "%" + search + "%" },
+              },
+              {
+                productId: { [Op.iLike]: search },
+              },
+            ],
           },
         };
       }

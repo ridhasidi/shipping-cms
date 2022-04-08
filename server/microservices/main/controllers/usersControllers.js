@@ -1,4 +1,5 @@
 const { comparePassword } = require("../helpers/bcrypt");
+const { generateToken } = require("../helpers/jwt");
 const { User } = require("../models/index");
 
 class Controller {
@@ -38,7 +39,8 @@ class Controller {
         name: user.name,
         role: user.role,
       };
-      res.status(200).json(payload);
+      const token = generateToken(payload);
+      res.status(200).json({ access_token: token });
     } catch (error) {
       next(error);
     }
