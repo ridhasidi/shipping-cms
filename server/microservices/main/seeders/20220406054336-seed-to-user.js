@@ -1,4 +1,5 @@
 "use strict";
+const fs = require("fs");
 const { passwordEncryption } = require("../helpers/bcrypt");
 
 module.exports = {
@@ -12,15 +13,9 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    let users = [
-      {
-        name: "admin1",
-        email: "admin1@mail.com",
-        password: passwordEncryption("12345"),
-        role: "administrator",
-      },
-    ];
+    let users = JSON.parse(fs.readFileSync("./data/users.json", "utf8"));
     users.forEach((element) => {
+      element.password = passwordEncryption(element.password);
       element.createdAt = new Date();
       element.updatedAt = new Date();
     });
